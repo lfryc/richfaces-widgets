@@ -172,7 +172,7 @@ define(['widget-test-base', 'jquery', 'jquery-ui', 'src/widgets/select/ordering-
           });
 
           waitsFor(function () {
-            return fixture.find(list2 + ' .ui-selectee').first().data('key') === firstItem.data('key');
+            return fixture.find(list2 + ' .ui-selected').first().data('key') === firstItem.data('key');
           }, 'item should be moved to top of opposing list', 1000);
 
           runs(function () {

@@ -7,7 +7,6 @@
  * * tokenizing
  * * using DOM as a source of suggestions
  * * auto-fill
- * * built-in button
  *
  * @module Input
  * @class autocomplete

@@ -22,9 +22,7 @@
   {{#if production}}
     <link rel="stylesheet" href="{{assets-demo}}/richwidgets-demo.min.css">
   {{else}}
-    <link rel="stylesheet" href="{{assets}}/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="{{assets}}/font-awesome/font-awesome.css">
-    <link rel="stylesheet" href="{{assets-demo}}/demo.css">
+    <link rel="stylesheet" href="{{assets-demo}}/font/fontawesome-webfont.woff?v=4.0.3">
 
     {{#each page.data.css_assets}}<link rel="stylesheet" href="{{../assets}}/{{this}}">
     {{/each}}
@@ -34,6 +32,22 @@
   {{/each}}
 
   <link rel="stylesheet" href="{{assets-demo}}/highlightjs/styles/github.css">
+
+  {{#if production}}
+    <link rel="subresource" href="{{href dirname 'dist/demos/fonts/OpenSans-Regular-webfont.woff'}}">
+    <link rel="subresource" href="{{href dirname 'dist/demos/fonts/OpenSans-Light-webfont.woff'}}">
+    <link rel="subresource" href="{{href dirname 'dist/demos/fonts/OpenSans-Bold-webfont.woff'}}">
+    <link rel="subresource" href="{{href dirname 'dist/demos/fonts/OpenSans-Semibold-webfont.woff'}}">
+    <link rel="subresource" href="{{assets-demo}}/font/fontawesome-webfont.woff?v=4.0.3">
+
+    <link rel="subresource" href="{{assets-demo}}/richwidgets-demo.min.js" />
+    {{#each page.data.js_assets_nonrw}}<link rel="subresource" href="{{../assets}}/{{this}}" />
+    {{/each}}
+    <link rel="subresource" href="{{assets-demo}}/modernizr/modernizr.js" />
+    <link rel="subresource" href="{{assets-demo}}/highlightjs/highlight.pack.js" />
+    <link rel="subresource" href="{{assets-demo}}/bootstrap/js/dropdown.js" />
+    <link rel="subresource" href="{{assets-demo}}/bootstrap/js/collapse.js" />
+  {{/if}}
 </head>
 
 <body class="{{ bodyClass }}">

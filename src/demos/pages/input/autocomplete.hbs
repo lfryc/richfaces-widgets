@@ -17,6 +17,20 @@ demos: [
   { id: 'button', title: 'Autocomplete can have a button' },
   { id: 'list-updates', title: 'Updating of DOM-based suggestions' }
 ]
+
+demo_js_assets: [
+  autocomplete/json-source.js,
+  autocomplete/function-source.js,
+  autocomplete/list.js,
+  autocomplete/table.js,
+  autocomplete/cache.js,
+  autocomplete/auto-focus.js,
+  autocomplete/auto-fill.js,
+  autocomplete/auto-focus-fill.js,
+  autocomplete/token.js,
+  autocomplete/button.js,
+  autocomplete/list-updates.js,
+]
 ---
 
   <h2>Autocomplete demos</h2>
@@ -49,8 +63,4 @@ demos: [
 
     </div>
   </fieldset>
-  {{/each}}
-
-  {{#each demos}}
-    <script src="{{assets-demo ../page/dirname}}/input/autocomplete/{{this.id}}.js"></script>
   {{/each}}

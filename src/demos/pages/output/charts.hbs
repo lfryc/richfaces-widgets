@@ -15,7 +15,18 @@ demos: [
             { id: 'multiple-category-bar-chart', title: 'Multiple category bar chart'},
             { id: 'line-chart-zoom', title: 'Line chart with zoom'},
         ]
+
+demo_js_assets: [
+  charts/line-chart.js,
+  charts/pie-chart.js,
+  charts/numberbar-chart.js,
+  charts/category-bar-chart.js,
+  charts/multiple-category-bar-chart.js,
+  charts/line-chart-zoom.js
+]
 ---
+
+<!---->
    <h2>Chart demos</h2>
 
     {{#each demos}}
@@ -38,8 +49,4 @@ demos: [
                 {{#markdown}}{{embed js_source}}{{/markdown}}
             </div>
         </fieldset>
-    {{/each}}
-
-    {{#each demos}}
-      <script src="{{assets-demo ../page/dirname}}/output/charts/{{this.id}}.js"></script>
     {{/each}}
